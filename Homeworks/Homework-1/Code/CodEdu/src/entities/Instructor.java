@@ -9,8 +9,7 @@ public class Instructor {
     private String telephoneNumber;
     private String title;
 
-    public Instructor(int id, String name, String surname, String email, String telephoneNumber, String title) {
-        this.id = id;
+    public Instructor(String name, String surname, String email, String telephoneNumber, String title) {
         this.name = name;
         this.surname = surname;
         this.email = email;

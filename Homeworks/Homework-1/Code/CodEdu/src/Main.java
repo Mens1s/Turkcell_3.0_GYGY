@@ -35,12 +35,12 @@ public class Main {
         CategoryManager hibCategoryManager = new CategoryManager(hibCategoryDao, loggers);
         CategoryManager jdbcCategoryManager = new CategoryManager(jdbcCategoryDao, loggers);
 
-        hibCategoryManager.add(new Category(1, "backendDevelopment"));
-        hibCategoryManager.add(new Category(1, "frontendDevelopment"));
+        hibCategoryManager.add(new Category( "backendDevelopment"));
+        hibCategoryManager.add(new Category( "frontendDevelopment"));
         // hibCategoryManager.add(new Category(1, "backendDevelopment")); // error
 
-        jdbcCategoryManager.add(new Category(1, "backendDevelopment"));
-        jdbcCategoryManager.add(new Category(1, "frontendDevelopment"));
+        jdbcCategoryManager.add(new Category( "backendDevelopment"));
+        jdbcCategoryManager.add(new Category( "frontendDevelopment"));
         // jdbcCategoryManager.add(new Category(1, "backendDevelopment")); // error
 
         // Course Field
@@ -50,13 +50,13 @@ public class Main {
         CourseManager hibCourseManager = new CourseManager(hibCourseDao, loggers);
         CourseManager jdbcCourseManager = new CourseManager(jdbcCourseDao, loggers);
 
-        hibCourseManager.add(new Course(1, "backendDevelopmentCourse", "Description", 10,1,1,1));
-        hibCourseManager.add(new Course(1, "frontendDevelopmentCourse", "Description", 10,1,1,1));
+        hibCourseManager.add(new Course( "backendDevelopmentCourse", "Description", 10,1,1,1));
+        hibCourseManager.add(new Course( "frontendDevelopmentCourse", "Description", 10,1,1,1));
         // hibCourseManager.add(new Course(1, "frontendDevelopmentCourse", "Description", 10,1,1,1));  // error
         // hibCourseManager.add(new Course(1, "frontendDevelopmentCourse", "Description", 10,1,1,-1)); // error
 
-        jdbcCourseManager.add(new Course(1, "backendDevelopmentCourse", "Description", 10,1,1,1));
-        jdbcCourseManager.add(new Course(1, "frontendDevelopmentCourse", "Description", 10,1,1,1));
+        jdbcCourseManager.add(new Course( "backendDevelopmentCourse", "Description", 10,1,1,1));
+        jdbcCourseManager.add(new Course( "frontendDevelopmentCourse", "Description", 10,1,1,1));
         // jdbcCourseManager.add(new Course(1, "frontendDevelopmentCourse", "Description", 10,1,1,1));  // error
         // jdbcCourseManager.add(new Course(1, "frontendDevelopmentCourse", "Description", 10,1,1,-1)); // error
 
@@ -67,10 +67,17 @@ public class Main {
         InstructorManager hibInstructorManager = new InstructorManager(hibInstructorDao, loggers);
         InstructorManager jdbcInstructorManager = new InstructorManager(jdbcInstructorDao, loggers);
 
-        hibInstructorManager.add(new Instructor(1, "Ahmet", "Yiğit", "ahmet_yigit_02@hotmail.com", "545", "SoftwareEng"));
-        hibInstructorManager.add(new Instructor(1, "Mens1s", "Yiğit", "ahmet_yigit_02@hotmail.com", "545", "SoftwareEng"));
+        hibInstructorManager.add(new Instructor( "Ahmet", "Yiğit", "ahmet_yigit_02@hotmail.com", "545", "SoftwareEng"));
+        hibInstructorManager.add(new Instructor( "Mens1s", "Yiğit", "ahmet_yigit_02@hotmail.com", "545", "SoftwareEng"));
 
-        jdbcInstructorManager.add(new Instructor(1, "Yiğit", "Yiğit", "ahmet_yigit_02@hotmail.com", "545", "SoftwareEng"));
-        jdbcInstructorManager.add(new Instructor(1, "Mensis", "Yiğit", "ahmet_yigit_02@hotmail.com", "545", "SoftwareEng"));
+        jdbcInstructorManager.add(new Instructor("Yiğit", "Yiğit", "ahmet_yigit_02@hotmail.com", "545", "SoftwareEng"));
+        jdbcInstructorManager.add(new Instructor( "Mensis", "Yiğit", "ahmet_yigit_02@hotmail.com", "545", "SoftwareEng"));
+
+        jdbcInstructorManager.update(1, new Instructor( "UpdatedData", "Yiğit", "ahmet_yigit_02@hotmail.com", "545", "SoftwareEng"));
+        jdbcInstructorManager.delete(0);
+        jdbcInstructorManager.delete(1);
+
+        jdbcCategoryManager.delete(1);
+        // jdbcCategoryManager.update(0, new Category( "frontendDevelopment")); // error same course name
     }
 }

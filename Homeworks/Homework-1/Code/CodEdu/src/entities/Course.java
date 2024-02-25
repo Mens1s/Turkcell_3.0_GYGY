@@ -9,8 +9,7 @@ public class Course {
     private int categoryId;
     private int price;
 
-    public Course(int id, String name, String description, int duration, int instructorId, int categoryId, int price) {
-        this.id = id;
+    public Course(String name, String description, int duration, int instructorId, int categoryId, int price) {
         this.name = name;
         this.description = description;
         this.duration = duration;
