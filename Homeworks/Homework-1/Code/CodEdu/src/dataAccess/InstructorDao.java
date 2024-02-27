@@ -1,8 +1,7 @@
-package dataAccess.Instructor;
+package dataAccess;
 
 import entities.Instructor;
-// This package not used
-// It is for modularity
+
 public interface InstructorDao {
     void add(Instructor instruction);
     void delete(Instructor instruction);

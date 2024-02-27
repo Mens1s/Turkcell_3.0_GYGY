@@ -11,15 +11,33 @@ import oopWithNLayeredApp.entities.Product;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        Product product1 = new Product(1, "Laptop", 5000);
-        Product product2 = new Product(2, "Mouse", 9);
+    public static void main(String[] args) {
+        // Değer tipi örneği: int
+        int x = 10; // x, doğrudan değeri (10) içerir
+        int y = x;  // y, x'in değerini kopyalar
 
-        List<Logger> loggers = List.of(new DatabaseLogger(), new MailLogger(), new FileLogger());
-        ProductManager productManager = new ProductManager(new HibernateProductDao(), loggers);
+        System.out.println("Değer Tipi Örneği:");
+        System.out.println("x: " + x);
+        System.out.println("y: " + y);
 
-        productManager.add(product1);
-        productManager.add(product2); // exception
+        // x'in değerini değiştirmek, y'i etkilemez
+        x = 20;
 
+        System.out.println("x: " + x); // x: 20
+        System.out.println("y: " + y); // y: 10 (y, x'in eski değerini içerir)
+
+        // Referans tipi örneği: String
+        int[] array = new int[]{0,1,2,3,4,5,6};
+        int[] protectedArray = array;
+
+        // location
+        System.out.println(array);
+        System.out.println(protectedArray);
+
+        System.out.println(protectedArray[1]);
+
+        array[1]= 55;
+
+        System.out.println(protectedArray[1]);
     }
 }
