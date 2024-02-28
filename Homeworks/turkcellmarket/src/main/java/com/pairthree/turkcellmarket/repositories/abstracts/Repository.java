@@ -20,8 +20,8 @@ public abstract class Repository <T extends BaseEntity> {
         entity.setId(UUID.randomUUID().toString());
         db.put(entity.getId(), entity);
     }
-    public void get(String id){
-        db.get(id);
+    public T get(String id){
+        return db.get(id);
     }
     public void update(T entity){
         db.put(entity.getId(), entity);
@@ -32,6 +32,4 @@ public abstract class Repository <T extends BaseEntity> {
     public List<T> getAll(){
         return db.values().stream().toList();
     }
-
-
 }
