@@ -10,15 +10,20 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class addresses {
+public class Address {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
-    // TODO: distinct ekle
+    @ManyToOne
+    @JoinColumn(name = "distinct_id", referencedColumnName = "id", insertable = false, updatable = false)
+    private District district;
 
-    // TODO : userID ekle
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
+    private User user;
+
     @Column(name="open_address")
     private String openAddress;
 

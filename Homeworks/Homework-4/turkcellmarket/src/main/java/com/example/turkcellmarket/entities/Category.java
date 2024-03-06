@@ -5,18 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name="suppliers")
+@Table(name="categories")
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Suppliers {
+public class Category {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
-    // TODO user id
-    @Column(name="tax_number")
-    private String taxNumber;
+    @Column(name="name")
+    private String name;
 }

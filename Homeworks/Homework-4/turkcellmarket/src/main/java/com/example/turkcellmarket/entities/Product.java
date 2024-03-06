@@ -14,11 +14,13 @@ public class Product {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
-    // category id
+    @ManyToOne
+    private Category category;
 
-    // brand id
+    @ManyToOne
+    private Brand brand;
 
     @Column(name="name")
     private String name;

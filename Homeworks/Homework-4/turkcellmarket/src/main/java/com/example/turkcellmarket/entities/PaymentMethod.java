@@ -14,7 +14,7 @@ public class PaymentMethod {// farkettim yarine halledicem .d
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
     @Column(name="payment_method")
     private String paymentMethod; // ENUM

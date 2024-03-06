@@ -14,14 +14,18 @@ public class Review {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
-    // user
+    private Integer id;
 
-    // product
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToOne
+    private Product product;
 
     @Column(name="comment")
     private String comment;
 
     @Column(name="rating")
-    private String rating;
+    private Double rating;
 }

@@ -11,26 +11,24 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class orders {
+public class Order {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
     @ManyToOne
     @JsonIgnore
-    private customers customer;
-
-    // TODO: order id
+    private Customer customer;
 
     @Column(name="date")
     private String date;
 
     @Column(name="total_price")
-    private double totalPrice;
+    private String totalPrice;
 
     @ManyToOne
     @JsonIgnore
-    private addresses address;
+    private Address address;
 }
 

@@ -14,10 +14,13 @@ public class WishList {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
-    // TODO user id
-    // TODO product id
+    @ManyToOne
+    private User user;
+
+    @ManyToOne
+    private Product product;
 
     @Column(name="added_date")
     private String addedDate;

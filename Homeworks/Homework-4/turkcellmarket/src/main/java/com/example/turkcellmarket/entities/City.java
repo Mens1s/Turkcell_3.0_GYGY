@@ -5,16 +5,20 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name="customers")
+@Table(name="cities")
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class customers {
+public class City {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
-    // TODO: user id
+    @ManyToOne
+    private Country country;
+
+    @Column(name="name")
+    private String name;
 }

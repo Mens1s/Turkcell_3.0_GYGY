@@ -1,26 +1,30 @@
 package com.example.turkcellmarket.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name="disticies")
+@Table(name="order_items")
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class disticies {
+public class OrderItem {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
     @ManyToOne
-    @JsonIgnore
-    private cities city;
+    private Product product;
 
-    @Column(name="name")
-    private String name;
+    @ManyToOne
+    private Order order;
+
+    @Column(name="product_count")
+    private int productCount;
+
+    @Column(name="price")
+    private double price;
 }

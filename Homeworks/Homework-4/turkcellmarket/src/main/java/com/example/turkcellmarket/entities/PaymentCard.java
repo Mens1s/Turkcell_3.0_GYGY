@@ -11,28 +11,34 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class paymentCard {
+public class PaymentCard {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
     @ManyToOne
     @JsonIgnore
-    private cardTypes cardTypes;
+    private CardType CardType;
 
-    // TODO : payment method id
-    // TODO : customer bank id
-    // TODO : seller bank id
-    // TODO : payment id
-    // TODO : seller bank id
+    @ManyToOne
+    private PaymentMethod paymentMethod;
+
+    @ManyToOne
+    private Bank customerBank;
+
+    @ManyToOne
+    private Bank sellerBank;
+
+    @ManyToOne
+    private Payment payment;
 
     @Column(name="amount")
     private double amount;
 
     @Column(name="installment_count")
-    private double installmentCount;
-// valla sizin sesler var benimki gelmiyo :D
+    private Integer installmentCount;
+
     @Column(name="status")
-    private double status;
+    private String status;
 }

@@ -5,17 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name="brands")
+@Table(name="card_types")
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class brands {
+public class CardType {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
-    @Column(name="name")
-    private String name;
+    @Column(name="cart_type")
+    private String cardType;
 }

@@ -15,11 +15,11 @@ public class Payment {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
     @ManyToOne
     @JsonIgnore
-    private orders order;
+    private Order order;
 
     private double totalAmount;
 }

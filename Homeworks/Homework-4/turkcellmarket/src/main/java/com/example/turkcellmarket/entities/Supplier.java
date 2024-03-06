@@ -5,24 +5,20 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name="cart_items")
+@Table(name="suppliers")
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class cardItems {
+public class Supplier {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
-    //TODO: add product id
+    @ManyToOne
+    private User user;
 
-    //TODO: shopping cart
-
-    @Column(name="item_count")
-    private int itemCount;
-
-    @Column(name="price")
-    private int price;
+    @Column(name="tax_number")
+    private String taxNumber;
 }

@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 // Ben bunu 12-1 ggibi bugün paylaşırım githubtan
-@Table(name="wish_list")
+@Table(name="users")
 @Entity
 @Data
 @NoArgsConstructor
@@ -14,7 +14,7 @@ public class User {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
     @Column(name="name")
     private String name;

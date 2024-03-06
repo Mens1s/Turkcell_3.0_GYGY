@@ -14,9 +14,11 @@ public class ShoppingCart {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
-    // TODO user id
+    @ManyToOne
+    private User user;
+
     @Column(name="total_price")
     private double totalPrice;
 

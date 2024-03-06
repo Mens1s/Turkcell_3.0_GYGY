@@ -5,19 +5,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name="cities")
+@Table(name="banks")
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class cities {
+public class Bank {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;
+    private Integer id;
 
-    //TODO : country id
-
-    @Column(name="name")
+    @Column(name="bank_name")
     private String name;
+
 }
