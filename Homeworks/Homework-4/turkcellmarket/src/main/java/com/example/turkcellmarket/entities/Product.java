@@ -32,5 +32,5 @@ public class Product {
     private double price;
 
     @Column(name="stock")
-    private double stock;
+    private String stock;
 }
