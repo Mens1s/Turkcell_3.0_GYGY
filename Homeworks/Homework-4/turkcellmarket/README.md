@@ -1,4 +1,15 @@
 There is 22 Entities, <br>
+
+<ul>
+<li> Controller DONE </li>
+<li> DTO </li>
+<li> Request - Response Pattern </li>
+<li> JPA Özel SQL Sorgusu </li>
+<li> Validation </li>
+<li> Business Rule </li>
+<li> Global Exception Handler  </li>
+</ul>
+
 Ahmet 
 <ul>
  <li>User</li>

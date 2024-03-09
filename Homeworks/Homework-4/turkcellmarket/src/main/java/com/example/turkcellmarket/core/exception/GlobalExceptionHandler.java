@@ -1,25 +1,40 @@
 package com.example.turkcellmarket.core.exception;
 
+import com.example.turkcellmarket.core.exception.types.BusinessException;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-public class CustomException extends RuntimeException{
-    private final HttpStatus httpStatus;
+import java.util.HashMap;
+import java.util.Map;
 
-    public CustomException(String message){
-        super(message);
-        httpStatus = HttpStatus.BAD_REQUEST;
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+    @ExceptionHandler({BusinessException.class})
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public String handleRuntimeException(BusinessException exception){
+        return exception.getMessage();
     }
 
-    public CustomException(HttpStatus httpStatus){
-        this.httpStatus = httpStatus;
+    @ExceptionHandler({MethodArgumentNotValidException.class})
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public Map<String, String> handleValidateException(MethodArgumentNotValidException exception){
+        Map<String, String> errors = new HashMap<>();
+
+        exception.getBindingResult().getAllErrors().forEach((error) -> {
+            String fieldName = error.getObjectName();
+            String errorMessage = error.getDefaultMessage();
+            errors.put(fieldName, errorMessage);
+        });
+        return errors;
     }
 
-    public CustomException(String message, HttpStatus httpStatus){
-        super(message);
-        this.httpStatus = httpStatus;
+    @ExceptionHandler({Exception.class})
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public String handleException(Exception exception){
+        return "Bi Allah bilir hatayı bi de server..";
     }
 
-    public HttpStatus getHttpStatus(){
-        return this.httpStatus;
-    }
 }

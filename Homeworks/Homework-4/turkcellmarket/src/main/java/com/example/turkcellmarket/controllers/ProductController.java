@@ -2,7 +2,10 @@ package com.example.turkcellmarket.controllers;
 
 import com.example.turkcellmarket.entities.Product;
 import com.example.turkcellmarket.services.abstracts.ProductService;
+import com.example.turkcellmarket.services.dtos.product.requests.ProductAddRequest;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,8 +21,14 @@ public class ProductController {
         return productService.getAll();
     }
 
+    @GetMapping("search")
+    public List<Product> search(@RequestParam String query){
+        return productService.searchQuery(query);
+    }
+
     @PostMapping
-    public void add(@RequestBody Product product){
+    @ResponseStatus(HttpStatus.OK)
+    public void add(@RequestBody @Valid ProductAddRequest product){
         productService.add(product);
     }
 }

@@ -1,9 +1,7 @@
 package com.example.turkcellmarket.services.dtos.product.requests;
 
-import com.example.turkcellmarket.entities.Brand;
-import com.example.turkcellmarket.entities.Category;
-import jakarta.persistence.Column;
-import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,11 +11,20 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProductForAddingDto {
+public class ProductAddRequest {
+
     private Integer categoryId;
+
     private Integer brandId;
+
+    @NotBlank
     private String name;
+
     private String description;
+
+    @Min(1)
     private double price;
+
+    @Min(1)
     private double stock;
 }
