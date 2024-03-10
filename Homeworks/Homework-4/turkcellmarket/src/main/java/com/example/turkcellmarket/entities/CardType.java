@@ -16,6 +16,6 @@ public class CardType {
     @Id
     private Integer id;
 
-    @Column(name="cart_type")
+    @Column(name="card_type")
     private String cardType;
 }
