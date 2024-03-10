@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 @AllArgsConstructor
-public class BankIServiceImpl implements BankIdService {
+public class BankIdServiceImpl implements BankIdService {
     private BankIdRespository bankIdRespository;
 
     @Override
