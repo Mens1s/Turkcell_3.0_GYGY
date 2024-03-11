@@ -19,7 +19,8 @@ public class Payment {
     @Column(name="id")
     private Integer id;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "order_id")
     @JsonIgnore
     private Order order;
 

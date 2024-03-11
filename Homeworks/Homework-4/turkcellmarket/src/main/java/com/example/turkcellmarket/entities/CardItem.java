@@ -18,10 +18,12 @@ public class CardItem {
     @Column(name="id")
     private Integer id;
 
-    @ManyToOne
-    private Product product;
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "suppliers_id")
+    private ProductSupplier productSupplier;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "shopping_cart_id")
     private ShoppingCart shoppingCart;
 
     @Column(name="item_count")

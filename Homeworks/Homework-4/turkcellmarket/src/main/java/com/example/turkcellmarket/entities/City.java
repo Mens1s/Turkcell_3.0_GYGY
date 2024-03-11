@@ -18,7 +18,8 @@ public class City {
     @Column(name="id")
     private Integer id;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "country_id")
     private Country country;
 
     @Column(name="name")

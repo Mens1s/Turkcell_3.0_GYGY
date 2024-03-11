@@ -32,7 +32,8 @@ public class PaymentCard {
     @ManyToOne
     private Bank sellerBank;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "payment_id")
     private Payment payment;
 
     @Column(name="amount")

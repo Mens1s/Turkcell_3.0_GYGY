@@ -18,10 +18,12 @@ public class Product {
     @Column(name="id")
     private Integer id;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = true)
+    @JoinColumn(name = "category_id")
     private Category category;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = true)
+    @JoinColumn(name = "brand_id")
     private Brand brand;
 
     @Column(name="name")
@@ -29,9 +31,6 @@ public class Product {
 
     @Column(name="description")
     private String description;
-
-    @Column(name="price")
-    private Double price;
 
     @Column(name="stock")
     private Integer stock;

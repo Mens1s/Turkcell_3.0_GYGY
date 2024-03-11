@@ -18,10 +18,10 @@ public class ShoppingCart {
     @Column(name="id")
     private Integer id;
 
-    @ManyToOne
+    @OneToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "user_id")
     private User user;
 
     @Column(name="total_price")
     private Double totalPrice;
-
 }

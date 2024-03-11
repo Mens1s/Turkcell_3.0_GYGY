@@ -18,11 +18,17 @@ public class OrderItem {
     @Column(name="id")
     private Integer id;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "order_id")
+    private Order order;
+
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "product_id")
     private Product product;
 
-    @ManyToOne
-    private Order order;
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "supplier_id")
+    private Supplier supplier;
 
     @Column(name="product_count")
     private Integer productCount;

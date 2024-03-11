@@ -19,7 +19,8 @@ public class Order {
     @Column(name="id")
     private Integer id;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "customer_id")
     @JsonIgnore
     private Customer customer;
 
@@ -29,8 +30,13 @@ public class Order {
     @Column(name="total_price")
     private Double totalPrice;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "address_id")
     @JsonIgnore
     private Address address;
+
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER)
+    @JoinColumn(name = "payment_id")
+    private Payment payment;
 }
 
