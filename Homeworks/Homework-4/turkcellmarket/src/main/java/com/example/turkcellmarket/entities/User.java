@@ -35,4 +35,7 @@ public class User {
 
     @Column(name="register_date", nullable = false)
     private String registerDate;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private ShoppingCart shoppingCart;
 }

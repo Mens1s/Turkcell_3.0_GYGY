@@ -1,6 +1,7 @@
 package com.example.turkcellmarket.services.abstracts;
 
 import com.example.turkcellmarket.entities.User;
+import com.example.turkcellmarket.services.dtos.product.requests.UserAddRequest;
 
 import java.util.List;
 

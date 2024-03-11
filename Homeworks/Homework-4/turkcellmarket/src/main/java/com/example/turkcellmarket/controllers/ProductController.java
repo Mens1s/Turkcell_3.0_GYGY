@@ -3,6 +3,7 @@ package com.example.turkcellmarket.controllers;
 import com.example.turkcellmarket.entities.Product;
 import com.example.turkcellmarket.services.abstracts.ProductService;
 import com.example.turkcellmarket.services.dtos.product.requests.ProductAddRequest;
+import com.example.turkcellmarket.services.dtos.product.responses.ProductGetResponse;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,12 +18,12 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping
-    public List<Product> getAll(){
+    public List<ProductGetResponse> getAll(){
         return productService.getAll();
     }
 
     @GetMapping("search")
-    public List<Product> search(@RequestParam String query){
+    public List<ProductGetResponse> search(@RequestParam String query){
         return productService.searchQuery(query);
     }
 

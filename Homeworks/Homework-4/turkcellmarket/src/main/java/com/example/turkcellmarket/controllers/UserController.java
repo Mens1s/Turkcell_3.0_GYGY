@@ -2,6 +2,7 @@ package com.example.turkcellmarket.controllers;
 
 import com.example.turkcellmarket.entities.User;
 import com.example.turkcellmarket.services.abstracts.UserService;
+import com.example.turkcellmarket.services.dtos.product.requests.UserAddRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

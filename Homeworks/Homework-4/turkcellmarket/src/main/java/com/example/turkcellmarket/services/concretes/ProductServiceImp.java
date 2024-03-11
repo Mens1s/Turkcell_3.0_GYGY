@@ -6,10 +6,13 @@ import com.example.turkcellmarket.entities.Product;
 import com.example.turkcellmarket.repositories.abstracts.ProductRepository;
 import com.example.turkcellmarket.services.abstracts.ProductService;
 import com.example.turkcellmarket.services.dtos.product.requests.ProductAddRequest;
+import com.example.turkcellmarket.services.dtos.product.responses.ProductGetResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @AllArgsConstructor
 public class ProductServiceImp implements ProductService {
@@ -39,11 +42,22 @@ public class ProductServiceImp implements ProductService {
     }
 
     @Override
-    public List<Product> searchQuery(String query){
-        return productRepository.searchByQuery(query);
+    public List<ProductGetResponse> searchQuery(String query){
+        return productRepository.searchByQuery(query).stream().map(this::convertEntityToDto).toList();
     }
     @Override
-    public List<Product> getAll() {
-        return productRepository.findAll();
+    public List<ProductGetResponse> getAll() {
+        return productRepository.findAll().stream().map(this::convertEntityToDto).toList();
+    }
+
+    private ProductGetResponse convertEntityToDto(Product product){
+        return ProductGetResponse.builder()
+                .id(product.getId())
+                .description(product.getDescription())
+                .name(product.getName())
+                .stock(product.getStock())
+                .brand(product.getBrand())
+                .category(product.getCategory())
+                .build();
     }
 }
