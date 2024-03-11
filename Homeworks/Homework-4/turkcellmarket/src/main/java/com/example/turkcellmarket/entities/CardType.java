@@ -18,6 +18,8 @@ public class CardType {
     @Column(name="id")
     private Integer id;
 
+
     @Column(name="cart_type", nullable = false)
+
     private String cardType;
 }
