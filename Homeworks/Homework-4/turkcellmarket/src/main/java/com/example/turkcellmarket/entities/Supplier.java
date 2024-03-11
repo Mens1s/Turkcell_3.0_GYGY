@@ -22,6 +22,6 @@ public class Supplier {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @Column(name="tax_number")
+    @Column(name="tax_number", nullable = false)
     private String taxNumber;
 }

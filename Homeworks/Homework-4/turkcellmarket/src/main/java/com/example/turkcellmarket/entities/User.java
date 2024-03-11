@@ -18,21 +18,21 @@ public class User {
     @Column(name="id")
     private Integer id;
 
-    @Column(name="name")
+    @Column(name="name", nullable = false)
     private String name;
 
-    @Column(name="surname")
+    @Column(name="surname", nullable = false)
     private String surname;
 
-    @Column(name="email")
+    @Column(name="email", nullable = false)
     private String email;
 
-    @Column(name="password")
+    @Column(name="password", nullable = false)
     private String password;
 
     @Column(name="last_login_date")
     private String lastLoginDate;
 
-    @Column(name="register_date")
+    @Column(name="register_date", nullable = false)
     private String registerDate;
 }

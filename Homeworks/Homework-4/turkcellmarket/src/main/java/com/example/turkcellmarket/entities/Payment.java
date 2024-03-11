@@ -24,6 +24,6 @@ public class Payment {
     @JsonIgnore
     private Order order;
 
-    @Column(name = "total_amount")
+    @Column(name = "total_amount", nullable = false)
     private Double totalAmount;
 }

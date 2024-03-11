@@ -26,9 +26,9 @@ public class ProductSupplier {
     @JoinColumn(name = "product_id")
     private Product product;
 
-    @Column(name = "price")
+    @Column(name = "price", nullable = false)
     private Double price;
 
-    @Column(name = "stock")
+    @Column(name = "stock", nullable = false)
     private Integer stock;
 }

@@ -36,10 +36,10 @@ public class PaymentCard {
     @JoinColumn(name = "payment_id")
     private Payment payment;
 
-    @Column(name="amount")
+    @Column(name="amount", nullable = false)
     private Double amount;
 
-    @Column(name="installment_count")
+    @Column(name="installment_count", nullable = false)
     private Integer installmentCount;
 
     @Column(name="status")

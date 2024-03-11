@@ -30,9 +30,9 @@ public class OrderItem {
     @JoinColumn(name = "supplier_id")
     private Supplier supplier;
 
-    @Column(name="product_count")
+    @Column(name="product_count", nullable = false)
     private Integer productCount;
 
-    @Column(name="price")
+    @Column(name="price", nullable = false)
     private Double price;
 }

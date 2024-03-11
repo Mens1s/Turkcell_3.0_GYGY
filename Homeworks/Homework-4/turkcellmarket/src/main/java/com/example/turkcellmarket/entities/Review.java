@@ -26,9 +26,9 @@ public class Review {
     @JoinColumn(name = "product_id")
     private Product product;
 
-    @Column(name="comment")
+    @Column(name="comment", nullable = false)
     private String comment;
 
-    @Column(name="rating")
+    @Column(name="rating", nullable = false)
     private Double rating;
 }

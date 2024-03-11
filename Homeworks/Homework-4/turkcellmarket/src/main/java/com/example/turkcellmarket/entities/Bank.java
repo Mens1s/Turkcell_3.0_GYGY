@@ -18,7 +18,7 @@ public class Bank {
     @Column(name="id")
     private Integer id;
 
-    @Column(name="bank_name")
+    @Column(name="bank_name", nullable = false)
     private String name;
 
 }

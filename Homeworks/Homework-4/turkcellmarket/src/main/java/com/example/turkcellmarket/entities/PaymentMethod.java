@@ -18,6 +18,6 @@ public class PaymentMethod {
     @Column(name="id")
     private Integer id;
 
-    @Column(name="payment_method")
+    @Column(name="payment_method", nullable = false)
     private String paymentMethod; // ENUM
 }

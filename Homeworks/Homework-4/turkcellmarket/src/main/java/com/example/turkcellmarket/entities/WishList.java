@@ -26,6 +26,6 @@ public class WishList {
     @JoinColumn(name = "product_id")
     private Product product;
 
-    @Column(name="added_date")
+    @Column(name="added_date", nullable = false)
     private String addedDate;
 }

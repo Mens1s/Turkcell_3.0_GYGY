@@ -22,6 +22,6 @@ public class ShoppingCart {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @Column(name="total_price")
+    @Column(name="total_price", nullable = false)
     private Double totalPrice;
 }

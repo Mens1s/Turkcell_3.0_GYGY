@@ -26,9 +26,9 @@ public class CardItem {
     @JoinColumn(name = "shopping_cart_id")
     private ShoppingCart shoppingCart;
 
-    @Column(name="item_count")
+    @Column(name="item_count", nullable = false)
     private Integer itemCount;
 
-    @Column(name="price")
+    @Column(name="price", nullable = false)
     private Double price;
 }

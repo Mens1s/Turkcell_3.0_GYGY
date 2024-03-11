@@ -24,6 +24,6 @@ public class District {
     @JsonIgnore
     private City city;
 
-    @Column(name="name")
+    @Column(name="name", nullable = false)
     private String name;
 }

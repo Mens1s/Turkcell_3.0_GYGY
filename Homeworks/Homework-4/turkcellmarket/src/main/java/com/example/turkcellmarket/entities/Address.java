@@ -26,10 +26,10 @@ public class Address {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @Column(name="open_address")
+    @Column(name="open_address", nullable = false)
     private String openAddress;
 
-    @Column(name="telephone_number")
-    private String telephonNumber;
+    @Column(name="telephone_number", nullable = false)
+    private String telephoneNumber;
 
 }
