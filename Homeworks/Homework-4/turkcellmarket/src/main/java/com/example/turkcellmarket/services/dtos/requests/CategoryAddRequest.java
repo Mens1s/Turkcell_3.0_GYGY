@@ -1,12 +1,11 @@
-package com.example.turkcellmarket.services.dtos.product.requests;
+package com.example.turkcellmarket.services.dtos.requests;
 
 import lombok.*;
-
 @Getter
 @Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class BrandAddRequest {
+public class CategoryAddRequest {
     private String name;
 }

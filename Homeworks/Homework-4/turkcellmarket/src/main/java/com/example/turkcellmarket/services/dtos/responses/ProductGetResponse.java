@@ -1,4 +1,4 @@
-package com.example.turkcellmarket.services.dtos.product.responses;
+package com.example.turkcellmarket.services.dtos.responses;
 
 import com.example.turkcellmarket.entities.Brand;
 import com.example.turkcellmarket.entities.Category;

@@ -1,4 +1,4 @@
-package com.example.turkcellmarket.services.dtos.product.requests;
+package com.example.turkcellmarket.services.dtos.requests;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

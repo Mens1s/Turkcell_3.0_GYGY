@@ -1,15 +1,13 @@
-package com.example.turkcellmarket.services.dtos.product.requests;
+package com.example.turkcellmarket.services.dtos.responses;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserAddRequest {
+public class UserGetResponse {
     private Integer id;
 
     private String name;
@@ -23,5 +21,4 @@ public class UserAddRequest {
     private String lastLoginDate;
 
     private String registerDate;
-
 }

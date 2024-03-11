@@ -1,10 +1,8 @@
 package com.example.turkcellmarket.services.concretes;
 
-import com.example.turkcellmarket.entities.ShoppingCart;
 import com.example.turkcellmarket.entities.User;
 import com.example.turkcellmarket.repositories.abstracts.UserRepository;
 import com.example.turkcellmarket.services.abstracts.UserService;
-import com.example.turkcellmarket.services.dtos.product.requests.UserAddRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

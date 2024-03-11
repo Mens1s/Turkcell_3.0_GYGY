@@ -1,4 +1,4 @@
-package com.example.turkcellmarket.services.dtos.product.responses;
+package com.example.turkcellmarket.services.dtos.responses;
 
 import lombok.*;
 

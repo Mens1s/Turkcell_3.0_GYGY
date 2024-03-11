@@ -1,9 +1,8 @@
 package com.example.turkcellmarket.controllers;
 
-import com.example.turkcellmarket.entities.Product;
 import com.example.turkcellmarket.services.abstracts.ProductService;
-import com.example.turkcellmarket.services.dtos.product.requests.ProductAddRequest;
-import com.example.turkcellmarket.services.dtos.product.responses.ProductGetResponse;
+import com.example.turkcellmarket.services.dtos.requests.ProductAddRequest;
+import com.example.turkcellmarket.services.dtos.responses.ProductGetResponse;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

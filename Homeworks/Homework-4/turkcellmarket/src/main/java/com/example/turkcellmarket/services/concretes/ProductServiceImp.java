@@ -5,13 +5,12 @@ import com.example.turkcellmarket.entities.Category;
 import com.example.turkcellmarket.entities.Product;
 import com.example.turkcellmarket.repositories.abstracts.ProductRepository;
 import com.example.turkcellmarket.services.abstracts.ProductService;
-import com.example.turkcellmarket.services.dtos.product.requests.ProductAddRequest;
-import com.example.turkcellmarket.services.dtos.product.responses.ProductGetResponse;
+import com.example.turkcellmarket.services.dtos.requests.ProductAddRequest;
+import com.example.turkcellmarket.services.dtos.responses.ProductGetResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor

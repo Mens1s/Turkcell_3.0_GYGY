@@ -1,7 +1,7 @@
 package com.example.turkcellmarket.services.abstracts;
 
-import com.example.turkcellmarket.services.dtos.product.requests.ProductAddRequest;
-import com.example.turkcellmarket.services.dtos.product.responses.ProductGetResponse;
+import com.example.turkcellmarket.services.dtos.requests.ProductAddRequest;
+import com.example.turkcellmarket.services.dtos.responses.ProductGetResponse;
 
 import java.util.List;
 
