@@ -1,16 +1,17 @@
 package com.example.turkcellmarket.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Table(name="cart_items")
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class CardItem {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
