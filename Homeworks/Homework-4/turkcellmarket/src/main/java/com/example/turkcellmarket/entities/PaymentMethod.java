@@ -2,14 +2,16 @@ package com.example.turkcellmarket.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Table(name="payment_methods")
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class PaymentMethod {// farkettim yarine halledicem .d
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

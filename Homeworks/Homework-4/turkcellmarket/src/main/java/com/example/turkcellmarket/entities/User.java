@@ -2,14 +2,16 @@ package com.example.turkcellmarket.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-// Ben bunu 12-1 ggibi bugün paylaşırım githubtan
+import lombok.Setter;
+
 @Table(name="users")
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class User {
     @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
