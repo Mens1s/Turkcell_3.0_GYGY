@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler({MethodArgumentNotValidException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Map<String, String> handleValidateException(MethodArgumentNotValidException exception){
+    public Map<String, String> handleValidateException(MethodArgumentNotValidException exception) {
         Map<String, String> errors = new HashMap<>();
 
         exception.getBindingResult().getAllErrors().forEach((error) -> {
