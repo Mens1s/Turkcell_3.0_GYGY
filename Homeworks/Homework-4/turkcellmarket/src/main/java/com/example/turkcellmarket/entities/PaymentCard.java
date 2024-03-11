@@ -14,9 +14,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class PaymentCard {
-    @Column(name="id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Integer id;
 
     @ManyToOne
@@ -36,7 +36,7 @@ public class PaymentCard {
     private Payment payment;
 
     @Column(name="amount")
-    private double amount;
+    private Double amount;
 
     @Column(name="installment_count")
     private Integer installmentCount;

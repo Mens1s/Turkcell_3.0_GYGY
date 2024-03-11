@@ -14,14 +14,15 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Payment {
-    @Column(name="id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Integer id;
 
     @ManyToOne
     @JsonIgnore
     private Order order;
 
-    private double totalAmount;
+    @Column(name = "total_amount")
+    private Double totalAmount;
 }

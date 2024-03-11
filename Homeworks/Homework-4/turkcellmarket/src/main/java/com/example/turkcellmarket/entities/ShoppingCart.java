@@ -13,15 +13,15 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ShoppingCart {
-    @Column(name="id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Integer id;
 
     @ManyToOne
     private User user;
 
     @Column(name="total_price")
-    private double totalPrice;
+    private Double totalPrice;
 
 }

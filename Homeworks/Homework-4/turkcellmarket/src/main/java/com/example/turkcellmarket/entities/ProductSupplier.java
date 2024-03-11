@@ -13,9 +13,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ProductSupplier {
-    @Column(name="id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Integer id;
 
     @ManyToOne
@@ -26,5 +26,5 @@ public class ProductSupplier {
     private Product product;
 
     @Column(name = "stock")
-    private int stock;
+    private Integer stock;
 }
