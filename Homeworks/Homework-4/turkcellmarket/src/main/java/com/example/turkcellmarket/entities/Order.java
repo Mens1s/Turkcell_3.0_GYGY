@@ -27,7 +27,7 @@ public class Order {
     private String date;
 
     @Column(name="total_price")
-    private String totalPrice;
+    private Double totalPrice;
 
     @ManyToOne
     @JsonIgnore
