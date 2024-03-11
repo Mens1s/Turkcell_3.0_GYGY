@@ -5,6 +5,6 @@ import com.example.turkcellmarket.entities.Country;
 import java.util.List;
 
 public interface CountryService {
-    public List<Country> getAll();
-    public void add(Country country);
+    List<Country> getAll();
+    void add(Country country);
 }

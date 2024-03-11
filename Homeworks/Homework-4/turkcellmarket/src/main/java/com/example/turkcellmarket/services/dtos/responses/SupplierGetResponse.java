@@ -8,9 +8,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SupplierGetResponse {
-
+    private Integer id;
     private User user;
-
     private String taxNumber;
 }
 
