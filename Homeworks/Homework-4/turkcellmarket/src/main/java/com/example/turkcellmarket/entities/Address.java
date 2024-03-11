@@ -2,32 +2,34 @@ package com.example.turkcellmarket.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Table(name="addreses")
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class Address {
-    @Column(name="id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "distinct_id", referencedColumnName = "id", insertable = false, updatable = false)
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "distinct_id")
     private District district;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "user_id")
     private User user;
 
-    @Column(name="open_address")
+    @Column(name="open_address", nullable = false)
     private String openAddress;
 
-    @Column(name="telephone_number")
-    private String telephonNumber;
+    @Column(name="telephone_number", nullable = false)
+    private String telephoneNumber;
 
 }

@@ -23,8 +23,5 @@ public class ProductAddRequest {
     private String description;
 
     @Min(1)
-    private double price;
-
-    @Min(1)
-    private double stock;
+    private Integer stock;
 }

@@ -3,18 +3,20 @@ package com.example.turkcellmarket.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Table(name="payment_cards")
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class PaymentCard {
-    @Column(name="id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Integer id;
 
     @ManyToOne
@@ -30,13 +32,14 @@ public class PaymentCard {
     @ManyToOne
     private Bank sellerBank;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "payment_id")
     private Payment payment;
 
-    @Column(name="amount")
-    private double amount;
+    @Column(name="amount", nullable = false)
+    private Double amount;
 
-    @Column(name="installment_count")
+    @Column(name="installment_count", nullable = false)
     private Integer installmentCount;
 
     @Column(name="status")

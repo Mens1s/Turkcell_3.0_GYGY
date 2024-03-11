@@ -2,29 +2,37 @@ package com.example.turkcellmarket.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Table(name="order_items")
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class OrderItem {
-    @Column(name="id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private Integer id;
 
-    @ManyToOne
-    private Product product;
-
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "order_id")
     private Order order;
 
-    @Column(name="product_count")
-    private int productCount;
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "product_id")
+    private Product product;
 
-    @Column(name="price")
-    private double price;
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "supplier_id")
+    private Supplier supplier;
+
+    @Column(name="product_count", nullable = false)
+    private Integer productCount;
+
+    @Column(name="price", nullable = false)
+    private Double price;
 }
