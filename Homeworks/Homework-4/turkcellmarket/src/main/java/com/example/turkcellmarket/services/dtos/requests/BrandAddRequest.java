@@ -1,5 +1,7 @@
 package com.example.turkcellmarket.services.dtos.requests;
 
+import com.example.turkcellmarket.services.constants.Messages;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Getter
@@ -8,5 +10,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BrandAddRequest {
+    @NotNull(message = Messages.ValidationErrors.NOT_NULL_ERROR)
     private String name;
 }

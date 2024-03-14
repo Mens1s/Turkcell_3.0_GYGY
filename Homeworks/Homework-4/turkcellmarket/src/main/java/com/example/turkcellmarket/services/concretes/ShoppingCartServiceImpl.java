@@ -29,6 +29,14 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     }
 
     @Override
+    public ShoppingCart createShoppingCartForUser(){
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCartRepository.save(shoppingCart);
+
+        return shoppingCart;
+    }
+
+    @Override
     public List<ShoppingCartGetResponse> getAll() {
         return null;
     }

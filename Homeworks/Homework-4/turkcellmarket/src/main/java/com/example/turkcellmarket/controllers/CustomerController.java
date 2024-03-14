@@ -2,6 +2,7 @@ package com.example.turkcellmarket.controllers;
 
 import com.example.turkcellmarket.entities.Customer;
 import com.example.turkcellmarket.services.abstracts.CustomerService;
+import com.example.turkcellmarket.services.dtos.requests.CustomerAddRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,7 @@ public class CustomerController {
     }
 
     @PostMapping
-    public void add(@RequestBody Customer customer){
-        customerService.add(customer);
+    public void add(@RequestBody CustomerAddRequest request){
+        customerService.add(request);
     }
 }

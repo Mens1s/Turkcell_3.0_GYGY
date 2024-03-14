@@ -9,7 +9,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CustomerGetResponse {
-
     User user;
     Integer id;
 }

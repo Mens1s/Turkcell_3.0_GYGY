@@ -2,11 +2,12 @@ package com.example.turkcellmarket.services.dtos.responses;
 
 import lombok.*;
 
-@Getter
-@Setter
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class UserGetResponse {
     private Integer id;
 
