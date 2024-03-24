@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="invoiceservice" />
+        <module name="discoveryservice" />
         <module name="customerservice" />
         <module name="productservice" />
         <module name="orderservice" />
@@ -16,6 +17,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="customerservice" options="-parameters" />
+      <module name="discoveryservice" options="-parameters" />
       <module name="invoiceservice" options="-parameters" />
       <module name="orderservice" options="-parameters" />
       <module name="productservice" options="-parameters" />
