@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/orders")
+@RequestMapping("/api/orders")
 public class OrderController {
     @GetMapping
     public int getCustomerIdByOrderId(@RequestParam("orderId") String orderId){
