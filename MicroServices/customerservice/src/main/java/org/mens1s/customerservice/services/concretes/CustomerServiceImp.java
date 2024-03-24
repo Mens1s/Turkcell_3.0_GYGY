@@ -6,6 +6,7 @@ import org.mens1s.customerservice.services.abstracts.CustomerService;
 import org.mens1s.customerservice.services.dtos.requests.SearchCustomerRequest;
 import org.mens1s.customerservice.services.dtos.responses.SearchCustomerResponse;
 import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
 
 import java.util.List;
 
@@ -13,9 +14,18 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CustomerServiceImp implements CustomerService {
     private final CustomerRepository customerRepository;
+    private final WebClient.Builder webClient;
 
     @Override
     public List<SearchCustomerResponse> search(SearchCustomerRequest request){
+        var result = webClient.build()
+                .get()
+                .uri("http://localhost:8081/api/orders?orderId="+request.getOrderNumber())
+                .retrieve()
+                .bodyToMono(Integer.class)
+                .block();
+        System.out.printf("Order service result: " + result);
+
         return customerRepository.search(request);
     }
 }
