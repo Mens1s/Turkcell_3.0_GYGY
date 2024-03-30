@@ -1,5 +1,6 @@
 package org.mens1s.customerservice.controllers;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.mens1s.customerservice.services.abstracts.CustomerService;
 import org.mens1s.customerservice.services.dtos.requests.SearchCustomerRequest;
@@ -18,7 +19,7 @@ public class CustomerController {
     private final CustomerService customerService;
 
     @PostMapping("search")
-    public List<SearchCustomerResponse> search(@RequestBody SearchCustomerRequest request){
+    public List<SearchCustomerResponse> search(@RequestBody @Valid SearchCustomerRequest request){
         return customerService.search(request);
     }
 }

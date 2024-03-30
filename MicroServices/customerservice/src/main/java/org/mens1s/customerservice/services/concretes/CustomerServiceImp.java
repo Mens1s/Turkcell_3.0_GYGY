@@ -15,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CustomerServiceImp implements CustomerService {
     private final CustomerRepository customerRepository;
-    private final WebClient.Builder webClient;
+    //private final WebClient.Builder webClient;
     private final OrderServiceClient orderServiceClient;
     @Override
     public List<SearchCustomerResponse> search(SearchCustomerRequest request){
