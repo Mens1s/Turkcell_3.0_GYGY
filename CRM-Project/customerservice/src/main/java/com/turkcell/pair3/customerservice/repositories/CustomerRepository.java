@@ -1,5 +1,6 @@
 package com.turkcell.pair3.customerservice.repositories;
 
+import com.turkcell.pair3.customerservice.entities.City;
 import com.turkcell.pair3.customerservice.entities.Customer;
 import com.turkcell.pair3.customerservice.services.dtos.requests.SearchCustomerRequest;
 import com.turkcell.pair3.customerservice.services.dtos.responses.SearchCustomerResponse;

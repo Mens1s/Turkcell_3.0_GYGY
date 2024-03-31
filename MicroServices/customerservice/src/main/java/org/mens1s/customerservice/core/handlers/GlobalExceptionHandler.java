@@ -36,7 +36,10 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ValidationProblemDetails handleConstraintViolationException(ConstraintViolationException exception) {
         ValidationProblemDetails validationProblemDetails = new ValidationProblemDetails();
-        validationProblemDetails.setDetail(exception.getMessage());
+        StringBuilder message = new StringBuilder();
+        exception.getConstraintViolations().forEach(violation ->
+                message.append(violation.getMessage()).append("; "));
+        validationProblemDetails.setDetail(message.toString());
         return validationProblemDetails;
     }
 

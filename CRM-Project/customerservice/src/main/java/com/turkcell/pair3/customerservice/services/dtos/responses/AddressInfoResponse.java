@@ -1,4 +1,5 @@
-package com.turkcell.pair3.customerservice.services.dtos.requests;
+package com.turkcell.pair3.customerservice.services.dtos.responses;
+
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -11,21 +12,14 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AddressAddRequest {
-    
-    @NotNull
+public class AddressInfoResponse {
     private int cityId;
 
-    @NotNull
     private int houseNumber;
 
-    @NotNull
     private int customerId;
 
-    @NotBlank(message = "Description is mandatory.")
     private String description;
 
-    @NotBlank(message = "House/Flat number is mandatory.")
     private String flatNumber;
-
 }
