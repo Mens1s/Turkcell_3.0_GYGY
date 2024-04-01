@@ -18,7 +18,7 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
         // Parameter SPEL Expression (Spring Expression)
     List<SearchCustomerResponse> search(String customerId, int nationalityId);
     */
-
+    Customer findById(int id);
     Customer findByNationalityId(int nationalityId);
 
     Customer findByCustomerId(String customerId);
