@@ -22,7 +22,7 @@ public class AuthController {
 
     @PostMapping("/login")
     @ResponseStatus(HttpStatus.OK)
-    public void login(@RequestBody LoginRequest request){
-        userService.login(request);
+    public String login(@RequestBody LoginRequest request){
+        return userService.login(request);
     }
 }

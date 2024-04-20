@@ -6,5 +6,5 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface AuthService {
     void register(RegisterRequest request);
-    void login(LoginRequest request);
+    String login(LoginRequest request);
 }

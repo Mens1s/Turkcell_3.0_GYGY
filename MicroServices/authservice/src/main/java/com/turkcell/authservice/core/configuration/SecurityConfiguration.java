@@ -1,5 +1,6 @@
 package com.turkcell.authservice.core.configuration;
 
+import com.turkcell.authservice.core.filters.JwtAuthFilter;
 import com.turkcell.authservice.services.abstracts.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -12,12 +13,14 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfiguration {
     private final PasswordEncoder passwordEncoder;
     private final UserService userService;
+    private final JwtAuthFilter jwtAuthFilter;
     // filter chain - güvenlik önemlerinin sırayla birbirine bağlandığı adımlar sırası
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
@@ -25,9 +28,12 @@ public class SecurityConfiguration {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req -> req
+                        .requestMatchers("/api/v1/test/**").authenticated()
                         //.requestMatchers("/swagger-ui/**").authenticated() // comes here authenticate check
-                        .anyRequest().permitAll()); // allow every request without auth
+                        .anyRequest().permitAll())
+                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class); // allow every request without auth
                 // .httpBasic(AbstractHttpConfigurer::disable);
+
 
         return http.build();
     }
