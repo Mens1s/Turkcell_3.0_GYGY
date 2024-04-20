@@ -1,0 +1,38 @@
+package com.turkcell.authservice.services.concretes;
+
+import com.turkcell.authservice.entitites.User;
+import com.turkcell.authservice.repositories.UserRepository;
+import com.turkcell.authservice.services.abstracts.UserService;
+import com.turkcell.authservice.services.dtos.requests.LoginRequest;
+import com.turkcell.authservice.services.dtos.requests.RegisterRequest;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class UserServiceImpl implements UserService {
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+    @Override
+    public void add(RegisterRequest request){
+        // TODO : mapstruct
+        User user = new User();
+        user.setEmail(request.getEmail());
+        user.setFirstName(request.getFirstName());
+        user.setLastName(request.getLastName());
+
+        user.setPassword(
+                passwordEncoder.encode(request.getPassword())
+        );
+
+        userRepository.save(user);
+    }
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return userRepository.findByEmail(username).orElseThrow();
+    }
+}
