@@ -33,9 +33,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
             if(jwtService.validateToken(jwt, user)){
                 // enter spring sec
-                // TODO: implement roles
-
-                UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(user, null, null);
+                UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
                 token.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 
                 SecurityContextHolder.getContext().setAuthentication(token);
