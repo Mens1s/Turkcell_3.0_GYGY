@@ -1,6 +1,6 @@
 package com.turkcell.authservice.services.concretes;
 
-import com.turkcell.authservice.core.jwt.JwtService;
+import com.mens1s.jwt.JwtService;
 import com.turkcell.authservice.entitites.User;
 import com.turkcell.authservice.services.abstracts.AuthService;
 import com.turkcell.authservice.services.abstracts.UserService;

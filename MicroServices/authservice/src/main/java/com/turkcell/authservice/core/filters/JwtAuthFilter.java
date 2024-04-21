@@ -1,6 +1,6 @@
 package com.turkcell.authservice.core.filters;
 
-import com.turkcell.authservice.core.jwt.JwtService;
+import com.mens1s.jwt.JwtService;
 import com.turkcell.authservice.services.abstracts.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

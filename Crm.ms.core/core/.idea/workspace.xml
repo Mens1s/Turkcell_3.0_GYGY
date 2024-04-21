@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80d0746c-2253-4e09-8824-e52127513330" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mens1s/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/mens1s/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mens1s/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/mens1s/jwt/JwtService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/core-1.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mens1s.AppTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/com.mens1s.AppTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/mens1s/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MicroServices/authservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../MicroServices/authservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MicroServices/authservice/src/main/java/com/turkcell/authservice/AuthserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MicroServices/authservice/src/main/java/com/turkcell/authservice/AuthserviceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MicroServices/authservice/src/main/java/com/turkcell/authservice/core/filters/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MicroServices/authservice/src/main/java/com/turkcell/authservice/core/filters/JwtAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MicroServices/authservice/src/main/java/com/turkcell/authservice/core/jwt/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mens1s/jwt/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MicroServices/authservice/src/main/java/com/turkcell/authservice/services/concretes/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MicroServices/authservice/src/main/java/com/turkcell/authservice/services/concretes/AuthServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2fQRZHj100J9lCNs3EYUVLJowiI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Maven. [archetype:generate...].executor": "Run",
+    "Maven. [arhetype:generate...].executor": "Run",
+    "Maven. [install].executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.core [install].executor": "Run",
+    "Maven.core [package].executor": "Run",
+    "Maven.core [validate].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80d0746c-2253-4e09-8824-e52127513330" name="Changes" comment="" />
+      <created>1713731372297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713731372297</updated>
+      <workItem from="1713731373997" duration="2050000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
