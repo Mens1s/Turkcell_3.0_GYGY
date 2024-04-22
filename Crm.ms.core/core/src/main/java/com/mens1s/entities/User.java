@@ -1,14 +1,12 @@
-package com.turkcell.authservice.entitites;
+package com.mens1s.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Collection;
 import java.util.Set;
 
 @Table(name="users")
@@ -22,17 +20,13 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @Column(name = "email")
-    private String email;
-
     @Column(name="password")
     private String password;
-
-    @Column(name="first_name")
+    @Column(name="email")
+    private String email;
+    @Column(name="firstName")
     private String firstName;
-
-    @Column(name="last_name")
+    @Column(name="lastName")
     private String lastName;
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -42,6 +36,7 @@ public class User implements UserDetails {
             inverseJoinColumns = @JoinColumn(name="role_id")
     )
     private Set<Role> authorities;
+
 
     @Override
     public String getUsername() {

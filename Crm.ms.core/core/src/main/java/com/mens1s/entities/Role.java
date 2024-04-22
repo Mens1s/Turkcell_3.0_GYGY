@@ -1,4 +1,4 @@
-package com.turkcell.authservice.entitites;
+package com.mens1s.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -20,7 +20,6 @@ public class Role implements GrantedAuthority {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
-
     @Column(name="name")
     private String name;
 

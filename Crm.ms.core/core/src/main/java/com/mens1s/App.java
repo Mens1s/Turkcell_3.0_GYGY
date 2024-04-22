@@ -1,9 +1,5 @@
 package com.mens1s;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )

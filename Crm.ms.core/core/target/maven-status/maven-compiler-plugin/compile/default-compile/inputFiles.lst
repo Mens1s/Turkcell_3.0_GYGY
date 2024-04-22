@@ -1,3 +1,13 @@
+/Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/configuration/BaseSecurityConfiguration.java
 /Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/App.java
+/Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/configuration/HttpSecurityCustomizer.java
+/Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/filters/JwtAuthFilter.java
+/Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/configuration/ApplicationConfiguration.java
+/Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/services/concretes/UserServiceImpl.java
+/Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/repositories/UserRepository.java
+/Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/annotations/EnableSecurity.java
+/Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/configuration/SecurityConfiguration.java
 /Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/jwt/JwtService.java
-/Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/services/TestService.java
+/Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/services/abstracts/UserService.java
+/Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/entities/Role.java
+/Users/mens1s/Desktop/com.mens1s/Turkcell_Individual/Turkcell_3.0_GYGY/Crm.ms.core/core/src/main/java/com/mens1s/entities/User.java

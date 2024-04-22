@@ -1,3 +1,6 @@
-com/mens1s/services/TestService.class
+com/mens1s/annotations/EnableSecurity.class
+com/mens1s/configuration/BaseSecurityConfiguration.class
+com/mens1s/configuration/SecurityConfiguration.class
 com/mens1s/jwt/JwtService.class
 com/mens1s/App.class
+com/mens1s/configuration/HttpSecurityCustomizer.class

@@ -1,7 +1,8 @@
-package com.turkcell.authservice.core.configuration;
+package com.mens1s.configuration;
 
-import com.turkcell.authservice.core.filters.JwtAuthFilter;
-import com.turkcell.authservice.services.abstracts.UserService;
+
+import com.mens1s.filters.JwtAuthFilter;
+import com.mens1s.services.abstracts.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,34 +22,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfiguration {
     private final PasswordEncoder passwordEncoder;
     private final UserService userService;
-    private final JwtAuthFilter jwtAuthFilter;
-    private static final String[] WHITE_LIST_URLS = {
-            "/swagger-ui/**",
-            "/v2/api-docs",
-            "/v3/api-docs",
-            "/v3/api-docs/**",
-            "/api/v1/auth/**"
-    };
+
     // filter chain - güvenlik önemlerinin sırayla birbirine bağlandığı adımlar sırası
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
 
-        http
-                .csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(req -> req
-                        //.requestMatchers(HttpMethod.GET, "/api/v1/test/**").authenticated()
-                        //.requestMatchers(HttpMethod.POST, "/api/v1/test/**").hasAnyAuthority("admin")
-                        //.requestMatchers("/swagger-ui/**").authenticated() // comes here authenticate check
-                        .requestMatchers(WHITE_LIST_URLS).permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/v1/test/**").hasAnyAuthority("admin")
-                        .anyRequest().authenticated()
-                        )
-                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class); // allow every request without auth
-                // .httpBasic(AbstractHttpConfigurer::disable);
-
-
-        return http.build();
-    }
 
     @Bean
     public AuthenticationProvider authenticationProvider(){
